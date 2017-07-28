@@ -1,0 +1,47 @@
+{
+  "name": "gaspard",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/gaspard.common.js",
+  "module": "dist/gaspard.esm.js",
+  "scripts": {
+    "start": "webpack-dev-server --open -d",
+    "build": "webpack --progress --config webpack.config.js",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "lint": "eslint --ext .js src"
+  },
+  "keywords": [],
+  "author": "Luca Perret <perret.luca@gmail.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.2",
+    "eslint": "^4.2.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-plugin-compat": "^1.0.4",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4",
+    "webpack": "^3.3.0",
+    "webpack-bundle-analyzer": "^2.8.3",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
