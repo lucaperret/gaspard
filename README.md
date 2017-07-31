@@ -1,17 +1,44 @@
-![Logo of the project](./images/logo.sample.png)
+![Gaspard Logo](./crab.svg)
 
-# Name of the project
-> Additional information or tag line
+# Gaspard
+> Lightweight DOM helpers
 
-A brief description of your project, what it is used for.
+Gaspard makes DOM manipulations easier. Attributes, querying, dimensions, you could import each function indenpendantly to save bytes with the power of webpack's [Tree Shaking](https://webpack.js.org/guides/tree-shaking/).
 
-## Installing / Getting started
+## Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+### Installing
 
+From npm
 ```shell
-commands here
+npm install gaspard
+```
+Or with yarn
+```shell
+yarn add gaspard
+```
+
+### Usage
+Import it via ES2015 module
+```javascript
+import * as Gaspard from 'gaspard'
+// or just a function
+import { addClass } from 'gaspard'
+```
+Via commonjs
+```javascript
+const Gaspard = require('gaspard')
+```
+Via `<script>`
+```html
+<script src="path/to/gaspard.min.js"></script>
+```
+> Gaspard is also available through [jsDelivr](https://cdn.jsdelivr.net/gaspard/0.1.0/gaspard.min.js) or [CloudFlare](https://cdnjs.cloudflare.com/ajax/libs/gaspard/0.1.0/gaspard.min.js) CDNs
+
+```javascript
+Gaspard.documentReady(() => {
+  Gaspard.find('html').addClass('dom-loaded')
+})
 ```
 
 Here you should say what actually happens when you execute the code above.
@@ -19,10 +46,10 @@ Here you should say what actually happens when you execute the code above.
 ## Developing
 
 ### Built With
-List main libraries, frameworks used including versions (React, Angular etc...)
+ES2015
 
 ### Prerequisites
-What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
+Node >= 4.0.0, npm >= 3.0.0
 
 
 ### Setting up Dev
@@ -31,9 +58,9 @@ Here's a brief intro about what a developer must do in order to start developing
 the project further:
 
 ```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
+git clone https://github.com/lucaperret/gaspard.git
+cd gaspard/
+yarn install
 ```
 
 And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
@@ -65,7 +92,7 @@ And again you'd need to tell what the previous code actually does.
 
 ## Versioning
 
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
 
 
 ## Configuration
@@ -79,27 +106,18 @@ Describe and show how to run the tests with code examples.
 Explain what these tests test and why.
 
 ```shell
-Give an example
+npm run test
 ```
 
 ## Style guide
 
-Explain your code style and show how to check it.
+[JavaScript Standard Style](https://standardjs.com)
 
-## Api Reference
-
-If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
-
-
-## Database
-
-Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc...
 
 ## Thanks
 
-Made with help of https://github.com/wearehive/project-guidelines
+Made with help of [project-guidelines](https://github.com/wearehive/project-guidelines)
 
 ## Licensing
 
-State what the license is and how to find the text version of the license.
+MIT License Copyright (c) 2017 Luca

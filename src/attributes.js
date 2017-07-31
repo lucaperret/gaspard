@@ -1,3 +1,4 @@
+import { toCamelCase } from './utils'
 
 /**
  * getRealClassNamesArray - Filter incorrect class names
@@ -12,76 +13,80 @@ function getRealClassNamesArray (classNames = '') {
 /**
  * hasClass - Determine whether the element is assigned the given class.
  *
+ * @param  {Element} element            A DOM Element
  * @param  {string} className           The class name to search for
- * @param  {Element} [context=document] A DOM Element or Document
  * @return {boolean}                    Result
  */
-export function hasClass (className, context = document) {
-  if (typeof className !== 'string') {
-    throw new TypeError('You should provide a class as the first argument')
-  }
-  if (context.classList) {
-    return context.classList.contains(className)
+export function hasClass (element, className) {
+  if (element.classList) {
+    return element.classList.contains(className)
   } else {
-    return !!~context.className.indexOf(className)
+    return !!~element.className.indexOf(className)
   }
 }
 
 /**
  * addClass - Adds the specified class(es) to element.
  *
+ * @param  {Element} element           A DOM Element
  * @param  {string} classNames         One or more space-separated classes to be added to the class attribute.
- * @param  {Element} [context=document] A DOM Element or Document
  */
-export function addClass (classNames, context = document) {
-  if (typeof context === 'string') {
-    context = document.querySelector(context)
-  }
-  if (context instanceof Element === false) {
-    throw new TypeError('You should provide a valid selector or dom node as second argument')
-  }
-  if (typeof classNames !== 'string') {
-    throw new TypeError('You should provide a class as the first argument')
-  }
+export function addClass (element, classNames) {
   classNames = getRealClassNamesArray(classNames)
-  if (context.classList) {
-    context.classList.add(...classNames)
+  if (element.classList) {
+    element.classList.add(...classNames)
   } else {
-    context.className += ' ' + classNames.join(' ')
+    element.className += ' ' + classNames.join(' ')
   }
 }
 
 /**
  * removeClass - Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
  *
+ * @param  {Element} element           A DOM Element
  * @param  {string} classNames         One or more space-separated classes to be removed to the class attribute.
- * @param  {Element} [context=document] A DOM Element or Document
  */
-export function removeClass (classNames, context = document) {
+export function removeClass (element, classNames) {
   classNames = getRealClassNamesArray(classNames)
-  if (context.classList) {
-    context.classList.remove(...classNames)
+  if (element.classList) {
+    element.classList.remove(...classNames)
   } else {
-    context.className = classNames.forEach(className => context.className.replace(className, ''))
+    element.className = classNames.forEach(className => element.className.replace(className, ''))
   }
 }
 
 /**
  * toggleClass - Add or remove one or more classes from element, depending on either the class's presence or the value of the state argument.
  *
+ * @param  {Element} element             A DOM Element
  * @param  {string} classNames           One or more class names (separated by spaces) to be toggled for each element in the matched set.
  * @param  {boolean} state               A Boolean value to determine whether the class should be added or removed.
- * @param  {Element} [context=document]  A DOM Element or Document
  */
-export function toggleClass (classNames, state, context = document) {
+export function toggleClass (element, classNames, state) {
   if (typeof state === 'boolean') {
     if (state) {
-      addClass(classNames, context)
+      addClass(element, classNames)
     } else {
-      removeClass(classNames, context)
+      removeClass(element, classNames)
     }
   } else {
     classNames = getRealClassNamesArray(classNames)
-    classNames.forEach(className => hasClass(className, context) ? removeClass(className, context) : addClass(className, context))
+    classNames.forEach(className => hasClass(element, className) ? removeClass(element, className) : addClass(element, className))
+  }
+}
+
+export function attr (element, attribute, value) {
+  if (value !== undefined) {
+    return element.setAttribute(attribute, value)
+  } else {
+    return element.getAttribute(attribute)
+  }
+}
+
+export function css (element, ruleName, value) {
+  if (value !== undefined) {
+    element.style[toCamelCase(ruleName)] = value
+  } else {
+    return getComputedStyle(element)[ruleName]
   }
 }
