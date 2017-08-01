@@ -1,4 +1,4 @@
-![Gaspard Logo](./crab.svg)
+[<img src="./crab.svg" width="180" height="180">](https://github.com/lucaperret/gaspard)
 
 # Gaspard
 > Lightweight DOM helpers
