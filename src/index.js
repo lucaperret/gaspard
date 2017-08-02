@@ -1,7 +1,7 @@
-// Inspired by http://youmightnotneedjquery.com/
-// and https://css-tricks.com/now-ever-might-not-need-jquery/
-
-// https://www.w3schools.com/js/js_errors.asp
+/***
+ * index Module
+ * @namespace index
+ */
 
 import { find, is, contains, prev, next, siblings, parent } from './selectors'
 import { hasClass, addClass, removeClass, toggleClass } from './attributes'

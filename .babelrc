@@ -1,16 +1,35 @@
 {
-    "presets": [
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-2"
+  ],
+  "env": {
+    "test": {
+      "presets": [
         [
-            "env",
-            {
-                "modules": false
-            }
+          "env",
+          {
+            "modules": false
+          }
         ],
         "stage-2"
-    ],
-    "env": {
-        "test": {
-            "presets": ["env", "stage-2"]
-        }
+      ]
+    },
+    "development": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ],
+        "stage-2"
+      ]
     }
+  }
 }

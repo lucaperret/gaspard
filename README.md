@@ -1,9 +1,8 @@
-[<img src="./crab.svg" width="180" height="180">](https://github.com/lucaperret/gaspard)
-
 # Gaspard
 > Lightweight DOM helpers
 
-Gaspard makes DOM manipulations easier. Attributes, querying, dimensions, you could import each function indenpendantly to save bytes with the power of webpack's [Tree Shaking](https://webpack.js.org/guides/tree-shaking/).
+The goal is to implement each [You might not need jQuery](http://youmightnotneedjquery.com)'s functions as ES modules. Enabling the power of Tree-shaking in [webpack](https://webpack.js.org/guides/tree-shaking/) or [rollup](https://rollupjs.org/#tree-shaking).
+
 
 ## Getting started
 
@@ -13,44 +12,36 @@ From npm
 ```shell
 npm install gaspard
 ```
-Or with yarn
-```shell
-yarn add gaspard
-```
 
 ### Usage
-Import it via ES2015 module
+
+Via ES2015 import statement
 ```javascript
 import * as Gaspard from 'gaspard'
 // or just a function
 import { addClass } from 'gaspard'
 ```
-Via commonjs
+
+Via commonjs (the entire library will be imported)
 ```javascript
 const Gaspard = require('gaspard')
 ```
+
 Via `<script>`
 ```html
-<script src="path/to/gaspard.min.js"></script>
-```
-> Gaspard is also available through [jsDelivr](https://cdn.jsdelivr.net/gaspard/0.1.0/gaspard.min.js) or [CloudFlare](https://cdnjs.cloudflare.com/ajax/libs/gaspard/0.1.0/gaspard.min.js) CDNs
-
-```javascript
-Gaspard.documentReady(() => {
-  Gaspard.find('html').addClass('dom-loaded')
-})
+<script src="node_modules/gaspard/dist/gaspard.umd.js"></script>
+<script>
+Gaspard.documentReady(function () {
+  Gaspard.find('html').addClass('dom-loaded');
+});
+</script>
 ```
 
-Here you should say what actually happens when you execute the code above.
+### API
+
+
 
 ## Developing
-
-### Built With
-ES2015
-
-### Prerequisites
-Node >= 4.0.0, npm >= 3.0.0
-
 
 ### Setting up Dev
 
@@ -60,45 +51,9 @@ the project further:
 ```shell
 git clone https://github.com/lucaperret/gaspard.git
 cd gaspard/
-yarn install
+npm install
+npm run dev
 ```
-
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-give instructions on how to build and release a new version
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy your-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
-
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
 
 ## Tests
 
@@ -109,15 +64,27 @@ Explain what these tests test and why.
 npm run test
 ```
 
-## Style guide
+### Building
 
-[JavaScript Standard Style](https://standardjs.com)
+
+```shell
+npm run build
+```
+
+Here again you should state what actually happens when the code above gets
+executed.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
 
 
 ## Thanks
+
+Thanks to the community of [You might not need jQuery](http://youmightnotneedjquery.com)
 
 Made with help of [project-guidelines](https://github.com/wearehive/project-guidelines)
 
 ## Licensing
 
-MIT License Copyright (c) 2017 Luca
+MIT License Copyright (c) 2017 Luca Perret
