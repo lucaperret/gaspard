@@ -1,87 +1,117 @@
+const PACKAGE = require('./package.json')
 const path = require('path')
 const webpack = require('webpack')
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-// const BabiliPlugin = require('babili-webpack-plugin')
+const Merge = require('webpack-merge')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BabiliPlugin = require('babili-webpack-plugin')
 
 const resolve = dir => path.join(__dirname, dir)
+const banner = PACKAGE.name + ' - ' + PACKAGE.version + ' | ' +
+  '(c) ' + new Date().getFullYear() + '  ' + PACKAGE.author + ' | ' +
+  PACKAGE.license + ' | ' +
+  PACKAGE.homepage
 
-// const plugins = [
-//   // new BabiliPlugin(),
-//   new webpack.optimize.UglifyJsPlugin(),
-//   new webpack.optimize.ModuleConcatenationPlugin()
-// ]
-// if (process.env.npm_config_report) {
-//   plugins.push(new BundleAnalyzerPlugin())
-// }
-// new webpack.BannerPlugin(options) https://webpack.js.org/plugins/banner-plugin/
-
-// module.exports = [
-//   {
-//     entry: './src/index.js',
-//     output: {
-//       filename: 'gaspard.esm.js',
-//       path: resolve('dist')
-//     },
-//     plugins: [
-//       new BabiliPlugin(),
-//       new webpack.optimize.ModuleConcatenationPlugin()
-//     ]
-//   }, {
-//     entry: './src/index.js',
-//     output: {
-//       filename: 'gaspard.umd.js',
-//       path: resolve('dist'),
-//       library: 'Gaspard',
-//       libraryTarget: 'umd'
-//     },
-//     module: {
-//       rules: [
-//         {
-//           test: /\.js$/,
-//           loader: 'babel-loader',
-//           include: [resolve('src')]
-//         }
-//       ]
-//     },
-//     devtool: 'inline-source-map',
-//     devServer: {
-//       contentBase: resolve('examples'),
-//       hot: true
-//     },
-//     plugins: [
-//       new webpack.optimize.UglifyJsPlugin(),
-//       new webpack.optimize.ModuleConcatenationPlugin(),
-//       new webpack.HotModuleReplacementPlugin()
-//     ]
-//   }
-// ]
-
-module.exports = {
-  entry: './src/index.js',
+const configDevevelopment = {
+  entry: {
+    example: './examples/index.js'
+  },
   output: {
-    filename: 'gaspard.umd.js',
-    path: resolve('dist'),
-    library: 'Gaspard',
-    libraryTarget: 'umd'
+    filename: '[name].js'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src'), resolve('examples')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
+      {
+        test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src')]
+        include: [resolve('src'), resolve('dist'), resolve('examples')]
       }
     ]
   },
-  devtool: 'source-map',
+  devtool: '#cheap-module-eval-source-map',
   devServer: {
-    contentBase: [resolve('examples'), resolve('dist')],
+    contentBase: [resolve('src'), resolve('dist'), resolve('examples')],
     hot: true,
     watchContentBase: true
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new FriendlyErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Development',
+      template: './examples/index.html'
+    })
   ]
+}
+
+let configProduction = {
+  entry: './src/index.js',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src')],
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      }
+    ]
+  },
+  plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.BannerPlugin(banner)
+  ]
+}
+
+configProduction = [
+  Merge(configProduction, {
+    output: {
+      filename: 'gaspard.umd.js',
+      path: resolve('dist'),
+      library: {
+        root: 'Gaspard',
+        amd: 'gaspard',
+        commonjs: 'common-gaspard'
+      },
+      libraryTarget: 'umd',
+      umdNamedDefine: true
+    },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          loader: 'babel-loader',
+          include: [resolve('src')]
+        }
+      ]
+    },
+    plugins: [
+      new webpack.optimize.UglifyJsPlugin()
+    ]
+  }),
+  Merge(configProduction, {
+    output: {
+      filename: 'gaspard.esm.js',
+      path: resolve('dist')
+    },
+    plugins: [
+      new BabiliPlugin()
+    ]
+  })
+]
+
+module.exports = (env) => {
+  return env && env.production ? configProduction : configDevevelopment
 }

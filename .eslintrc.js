@@ -14,9 +14,6 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0, // allow debugger during development
     indent: [2, 2]
   },
-  globals: {
-    Gaspard: true
-  },
   env: {
     browser: true,
     'jest/globals': true

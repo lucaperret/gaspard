@@ -2,11 +2,12 @@
   "name": "gaspard",
   "version": "0.1.0",
   "description": "",
+  "homepage": "https://github.com/lucaperret/gaspard",
   "main": "dist/gaspard.common.js",
   "module": "dist/gaspard.esm.js",
   "scripts": {
     "dev": "webpack-dev-server --open -d",
-    "build": "webpack --progress --config webpack.config.js",
+    "build": "webpack --env.production --progress --config webpack.config.js",
     "test": "jest",
     "test-watch": "jest --watch",
     "lint": "eslint --ext .js src",
@@ -16,9 +17,20 @@
     "doc:serve": "documentation serve --watch src/index.js",
     "doc:readme": "documentation readme src/index.js --section=API"
   },
-  "keywords": [],
+  "keywords": [
+    "jquery",
+    "dom",
+    "helper",
+    "document",
+    "selector",
+    "attribute",
+    "position",
+    "selector"
+  ],
   "author": "Luca Perret <perret.luca@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": "https://github.com/lucaperret/gaspard/issues",
+  "repository": "lucaperret/gaspard",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -31,15 +43,18 @@
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
     "webpack": "^3.3.0",
-    "webpack-bundle-analyzer": "^2.8.3",
-    "webpack-dev-server": "^2.6.1"
+    "webpack-dev-server": "^2.6.1",
+    "webpack-merge": "^4.1.0"
   },
   "engines": {
     "node": ">= 4.0.0",

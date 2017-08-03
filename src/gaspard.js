@@ -3,6 +3,7 @@
  * @module gaspardElements
  */
 
+import { css } from './attributes'
 import { find } from './selectors'
 
 /**
@@ -13,14 +14,19 @@ import { find } from './selectors'
 export default class GaspardElements {
   constructor (elements = []) {
     let contextElements
-    if (Array.isArray()) {
+    if (Array.isArray(elements)) {
       contextElements = elements
+    } else if (typeof elements === 'string') {
+      contextElements = find(elements)
     } else {
-      contextElements = typeof elements === 'string' ? find(elements) : [elements]
+      contextElements = [elements]
     }
-    this.elements = contextElements
+    this.elements = [].concat(contextElements)
   }
-
+  css (ruleName, value) {
+    this.elements.forEach(element => css(element, ruleName, value))
+    return this
+  }
   /**
    * Return a collection of matched elements either found in the DOM based on passed argument
    *

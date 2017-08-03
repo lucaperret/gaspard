@@ -1,10 +1,8 @@
-// import { find } from '../src/index'
-// console.log(find('#app'))
-import GaspardElements from '../src/gaspard'
-console.log(GaspardElements)
-//
-// const link = Gaspard.find('#app2')
-// const apps = new Gaspard.GaspardElements('div')
-// // apps.addClass('test2').toggleClass('test2')
-// const gaspardElements = new GaspardElements(document)
-// console.log(gaspardElements)
+// import { GaspardElements } from '../src'
+import * as Gaspard from '../dist/gaspard.esm'
+// const g2 = require('../dist/gaspard.umd')
+// console.log(g2)
+console.log(Gaspard)
+// const elements = new GaspardElements('#app2')
+// elements.css('background-color', 'red')
+// console.log(elements)

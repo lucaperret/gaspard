@@ -3,6 +3,7 @@
     [
       "env",
       {
+        "loose": true,
         "modules": false
       }
     ],
@@ -10,17 +11,6 @@
   ],
   "env": {
     "test": {
-      "presets": [
-        [
-          "env",
-          {
-            "modules": false
-          }
-        ],
-        "stage-2"
-      ]
-    },
-    "development": {
       "presets": [
         [
           "env",
