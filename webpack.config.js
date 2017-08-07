@@ -1,10 +1,8 @@
 const PACKAGE = require('./package.json')
 const path = require('path')
 const webpack = require('webpack')
-const Merge = require('webpack-merge')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BabiliPlugin = require('babili-webpack-plugin')
 
 const resolve = dir => path.join(__dirname, dir)
 const banner = PACKAGE.name + ' - ' + PACKAGE.version + ' | ' +
@@ -54,8 +52,19 @@ const configDevevelopment = {
   ]
 }
 
-let configProduction = {
+const configProduction = {
   entry: './src/index.js',
+  output: {
+    filename: 'gaspard.umd.js',
+    path: resolve('dist'),
+    library: {
+      root: 'Gaspard',
+      amd: 'gaspard',
+      commonjs: 'common-gaspard'
+    },
+    libraryTarget: 'umd',
+    umdNamedDefine: true
+  },
   module: {
     rules: [
       {
@@ -66,51 +75,20 @@ let configProduction = {
         options: {
           formatter: require('eslint-friendly-formatter')
         }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [resolve('src')]
       }
     ]
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.BannerPlugin(banner)
+    new webpack.BannerPlugin(banner),
+    new webpack.optimize.UglifyJsPlugin()
   ]
 }
-
-configProduction = [
-  Merge(configProduction, {
-    output: {
-      filename: 'gaspard.umd.js',
-      path: resolve('dist'),
-      library: {
-        root: 'Gaspard',
-        amd: 'gaspard',
-        commonjs: 'common-gaspard'
-      },
-      libraryTarget: 'umd',
-      umdNamedDefine: true
-    },
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          loader: 'babel-loader',
-          include: [resolve('src')]
-        }
-      ]
-    },
-    plugins: [
-      new webpack.optimize.UglifyJsPlugin()
-    ]
-  }),
-  Merge(configProduction, {
-    output: {
-      filename: 'gaspard.esm.js',
-      path: resolve('dist')
-    },
-    plugins: [
-      new BabiliPlugin()
-    ]
-  })
-]
 
 module.exports = (env) => {
   return env && env.production ? configProduction : configDevevelopment

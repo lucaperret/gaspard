@@ -1,13 +1,24 @@
 const webpack = require('webpack')
-const BabiliPlugin = require('babili-webpack-plugin')
 
 module.exports = {
-  entry: './index.js',
+  entry: './examples/index.js',
   output: {
-    filename: 'examples.js'
+    filename: './examples/examples.js'
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      loader: 'babel-loader',
+      options: {
+        presets: [
+          ['env', {
+            modules: false
+          }]
+        ]
+      }
+    }]
   },
   plugins: [
-    new BabiliPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin()
   ]
 }
