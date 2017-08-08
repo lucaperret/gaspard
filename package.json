@@ -1,7 +1,7 @@
 {
   "name": "gaspard",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Lightweight DOM helpers",
   "homepage": "https://github.com/lucaperret/gaspard",
   "main": "dist/gaspard.common.js",
   "module": "src/index.js",
