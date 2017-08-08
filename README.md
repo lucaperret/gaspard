@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.org/lucaperret/gaspard.svg?branch=master)](https://travis-ci.org/lucaperret/gaspard)
 [![Coverage Status](https://coveralls.io/repos/github/lucaperret/gaspard/badge.svg?branch=master)](https://coveralls.io/github/lucaperret/gaspard?branch=master)
+[![npm version](https://badge.fury.io/js/gaspard.svg)](https://badge.fury.io/js/gaspard)
 [![Dependency Status](https://david-dm.org/lucaperret/gaspard.svg)](https://david-dm.org/lucaperret/gaspard.svg)
 [![devDependency Status](https://david-dm.org/lucaperret/gaspard/dev-status.svg)](https://david-dm.org/lucaperret/gaspard.svg#info=devDependencies)
 
