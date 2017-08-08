@@ -1,11 +1,7 @@
-node_modules
-.DS_Store
-.idea
 docs
 examples
 test
 .babelrc
-.coveralls.yml
 .editorconfig
 .eslintignore
 .eslintrc.js
