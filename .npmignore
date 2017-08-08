@@ -1,9 +1,14 @@
 node_modules
 .DS_Store
 .idea
+docs
+examples
 test
-jest.config.js
 .babelrc
+.coveralls.yml
 .editorconfig
 .eslintignore
 .eslintrc.js
+.travis.yml
+jest.config.js
+webpack.config.js
