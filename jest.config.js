@@ -11,5 +11,6 @@ module.exports = {
   },
   verbose: true,
   collectCoverage: true,
-  coverageDirectory: 'test/coverage'
+  coverageDirectory: 'test/coverage',
+  coverageReporters: ['lcov', 'text']
 }

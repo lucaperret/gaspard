@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for selectors.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> selectors.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/***
+ * Selectors Module
+ * @namespace selectors
+ */
+&nbsp;
+/**
+ * Return a collection of matched elements either found in the DOM based on passed argument
+ *
+ * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
+ * @param {(HTMLDocument|Element)} [context=document] A DOM Element or Document
+ * @return {Array} A collection of DOM Elements
+ */
+export function <span class="fstat-no" title="function not covered" >find </span>(selector, context = <span class="branch-0 cbranch-no" title="branch not covered" >document)</span> {
+<span class="cstat-no" title="statement not covered" >  if (context instanceof Element === false &amp;&amp; context instanceof HTMLDocument === false) {</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError('You should provide a valid dom node as second argument')</span>
+  }
+  let elements
+<span class="cstat-no" title="statement not covered" >  if (/^#[\w-]*$/.test(selector)) {</span>
+<span class="cstat-no" title="statement not covered" >    elements = document.getElementById(selector.substr(1))</span>
+  } else <span class="cstat-no" title="statement not covered" >if (/^\.[\w-]*$/.test(selector)) {</span>
+<span class="cstat-no" title="statement not covered" >    elements = context.getElementsByClassName(selector.slice(1))</span>
+  } else <span class="cstat-no" title="statement not covered" >if (/^\w+$/.test(selector)) {</span>
+<span class="cstat-no" title="statement not covered" >    elements = context.getElementsByTagName(selector)</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    elements = context.querySelectorAll(selector)</span>
+  }
+<span class="cstat-no" title="statement not covered" >  if (elements.length) {</span>
+<span class="cstat-no" title="statement not covered" >    elements = [...elements]</span>
+  }
+<span class="cstat-no" title="statement not covered" >  return elements</span>
+}
+&nbsp;
+/**
+ * Check the element against a selector or element, and return true if the element match the given argument.
+ *
+ * @param {Element} element A DOM node
+ * @param {(string|Element)} selectorOrElement A string containing a selector expression or a DOM node
+ * @return {boolean} Is element match with selectorOrElement
+ */
+export function <span class="fstat-no" title="function not covered" >is </span>(element, selectorOrElement) {
+<span class="cstat-no" title="statement not covered" >  if (selectorOrElement === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      element.matches ||
+      element.matchesSelector ||
+      element.msMatchesSelector ||
+      element.mozMatchesSelector ||
+      element.webkitMatchesSelector ||
+      element.oMatchesSelector
+    ).call(element, selectorOrElement)
+  } else {
+<span class="cstat-no" title="statement not covered" >    return element === selectorOrElement</span>
+  }
+}
+&nbsp;
+/**
+ * Check to see if a DOM element is a descendant of another DOM element.
+ *
+ * @param {Element} element A DOM node
+ * @param {Element} child A potential child DOM node
+ * @return {boolean} Is element has child as a descendant
+ */
+export function <span class="fstat-no" title="function not covered" >contains </span>(element, child) {
+<span class="cstat-no" title="statement not covered" >  return element !== child &amp;&amp; element.contains(child)</span>
+}
+&nbsp;
+/**
+ * Get the immediately preceding sibling of the element.
+ *
+ * @param {Element} element A DOM node
+ * @return {Element} The previous DOM node
+ */
+export function <span class="fstat-no" title="function not covered" >prev </span>(element) {
+<span class="cstat-no" title="statement not covered" >  return element.previousElementSibling</span>
+}
+&nbsp;
+/**
+ * Get the immediately following sibling of the element.
+ *
+ * @param {Element} element A DOM node
+ * @return {Element} The following DOM node
+ */
+export function next (element) {
+  return element.nextElementSibling
+}
+&nbsp;
+/**
+ * Get the siblings of the element.
+ *
+ * @param {Element} element A DOM node
+ * @return {Array} Siblings DOM nodes
+ */
+export function <span class="fstat-no" title="function not covered" >siblings </span>(element) {
+<span class="cstat-no" title="statement not covered" >  return [...element.parentNode.children].fitler(<span class="fstat-no" title="function not covered" >ch</span>ild =&gt; <span class="cstat-no" title="statement not covered" >child !== element)</span></span>
+}
+&nbsp;
+/**
+ * Get the parent of the element.
+ *
+ * @param {Element} element A DOM node
+ * @return {Element} The parent DOM node
+ */
+export function <span class="fstat-no" title="function not covered" >parent </span>(element) {
+<span class="cstat-no" title="statement not covered" >  return element.parentNode</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Aug 08 2017 22:03:38 GMT+0200 (CEST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

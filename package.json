@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --open -d",
     "build": "webpack --env.production --progress --config webpack.config.js",
     "build:examples": "webpack -p --progress --config examples/webpack.config.js",
-    "test": "jest",
+    "test": "jest && cat test/coverage/lcov.info | coveralls",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .js src",
     "doc:buildmd": "documentation build src/index.js -g -f md -o docs/API.md",
@@ -34,7 +34,8 @@
   "bugs": "https://github.com/lucaperret/gaspard/issues",
   "repository": "lucaperret/gaspard",
   "dependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1"
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "coveralls": "^2.13.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -55,9 +56,9 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
+    "semantic-release": "^6.3.6",
     "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1",
-    "semantic-release": "^6.3.6"
+    "webpack-dev-server": "^2.6.1"
   },
   "engines": {
     "node": ">= 4.0.0",

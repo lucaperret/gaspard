@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for attributes.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> attributes.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/***
+ * Attributes Module
+ * @module attributes
+ */
+&nbsp;
+import { toCamelCase } from './utils'
+&nbsp;
+/**
+ * Filter incorrect class names.
+ * @private
+ *
+ * @param {string} [classNames=''] One or more space-separated classes to be filtered
+ * @return {Array} Valid class names array
+ */
+function <span class="fstat-no" title="function not covered" >getRealClassNamesArray </span>(classNames = <span class="branch-0 cbranch-no" title="branch not covered" >'')</span> {
+<span class="cstat-no" title="statement not covered" >  return classNames.split(' ').filter(<span class="fstat-no" title="function not covered" >cl</span>assName =&gt; <span class="cstat-no" title="statement not covered" >!!className)</span></span>
+}
+&nbsp;
+/**
+ * Determine whether the element is assigned the given class.
+ *
+ * @param {Element} element A DOM node
+ * @param {string} className The class name to search for
+ * @return {boolean} Result
+ */
+export function <span class="fstat-no" title="function not covered" >hasClass </span>(element, className) {
+<span class="cstat-no" title="statement not covered" >  if (element.classList) {</span>
+<span class="cstat-no" title="statement not covered" >    return element.classList.contains(className)</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    return !!~element.className.indexOf(className)</span>
+  }
+}
+&nbsp;
+/**
+ * Adds the specified class(es) to element.
+ *
+ * @param {Element} element A DOM node
+ * @param {string} classNames One or more space-separated classes to be added to the class attribute
+ */
+export function <span class="fstat-no" title="function not covered" >addClass </span>(element, classNames) {
+<span class="cstat-no" title="statement not covered" >  classNames = getRealClassNamesArray(classNames)</span>
+<span class="cstat-no" title="statement not covered" >  if (element.classList) {</span>
+<span class="cstat-no" title="statement not covered" >    element.classList.add(...classNames)</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    element.className += ' ' + classNames.join(' ')</span>
+  }
+}
+&nbsp;
+/**
+ * Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+ *
+ * @param {Element} element A DOM node
+ * @param {string} classNames One or more space-separated classes to be removed to the class attribute
+ */
+export function <span class="fstat-no" title="function not covered" >removeClass </span>(element, classNames) {
+<span class="cstat-no" title="statement not covered" >  classNames = getRealClassNamesArray(classNames)</span>
+<span class="cstat-no" title="statement not covered" >  if (element.classList) {</span>
+<span class="cstat-no" title="statement not covered" >    element.classList.remove(...classNames)</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    element.className = classNames.forEach(<span class="fstat-no" title="function not covered" >cl</span>assName =&gt; <span class="cstat-no" title="statement not covered" >element.className.replace(className, ''))</span></span>
+  }
+}
+&nbsp;
+/**
+ * Add or remove one or more classes from element, depending on either the class's presence or the value of the state argument.
+ *
+ * @param {Element} element A DOM node
+ * @param {string} classNames One or more class names (separated by spaces) to be toggled for each element in the matched set
+ * @param {boolean} state A Boolean value to determine whether the class should be added or removed
+ */
+export function <span class="fstat-no" title="function not covered" >toggleClass </span>(element, classNames, state) {
+<span class="cstat-no" title="statement not covered" >  if (typeof state === 'boolean') {</span>
+<span class="cstat-no" title="statement not covered" >    if (state) {</span>
+<span class="cstat-no" title="statement not covered" >      addClass(element, classNames)</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      removeClass(element, classNames)</span>
+    }
+  } else {
+<span class="cstat-no" title="statement not covered" >    classNames = getRealClassNamesArray(classNames)</span>
+<span class="cstat-no" title="statement not covered" >    classNames.forEach(<span class="fstat-no" title="function not covered" >cl</span>assName =&gt; <span class="cstat-no" title="statement not covered" >hasClass(element, className) ? removeClass(element, className) : addClass(element, className))</span></span>
+  }
+}
+&nbsp;
+/**
+ * Get the value of an attribute for the element
+ *
+ * @param {Element} element A DOM node
+ * @param {string} attribute The name of the attribute to get
+ * @return {string} The value of the attribute
+ */
+/**
+ * Set the value of an attribute for the element.
+ *
+ * @param {Element} element A DOM node
+ * @param {string} attribute The name of the attribute to set
+ * @param {string} [value] A value to set for the attribute. If null, the specified attribute will be removed
+ */
+export function <span class="fstat-no" title="function not covered" >attr </span>(element, attribute, value) {
+<span class="cstat-no" title="statement not covered" >  if (value !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >    if (value === null) {</span>
+<span class="cstat-no" title="statement not covered" >      element.removeAttribute(attribute)</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      element.setAttribute(attribute, value)</span>
+    }
+  } else {
+<span class="cstat-no" title="statement not covered" >    return element.getAttribute(attribute)</span>
+  }
+}
+&nbsp;
+/**
+ * Get the computed style properties for the element.
+ *
+ * @param {Element} element A DOM node
+ * @param {string} ruleName A CSS property
+ * @return {string} The value of the CSS property
+ */
+/**
+  * Set a CSS property for the element.
+  *
+  * @param {Element} element A DOM node
+  * @param {string} ruleName A CSS property
+  * @param {string} [value] A value to set for the property
+  */
+export function <span class="fstat-no" title="function not covered" >css </span>(element, ruleName, value) {
+<span class="cstat-no" title="statement not covered" >  if (value !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >    element.style[toCamelCase(ruleName)] = value</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    return getComputedStyle(element)[ruleName]</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Aug 08 2017 22:03:38 GMT+0200 (CEST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
