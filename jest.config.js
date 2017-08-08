@@ -2,9 +2,13 @@ module.exports = {
   transform: {
     '^.+\\.jsx?$': 'babel-jest'
   },
-  modulePaths: [
-    'src'
+  roots: [
+    '<rootDir>/src/',
+    '<rootDir>/test/'
   ],
+  moduleNameMapper: {
+    'src': '<rootDir>/src'
+  },
   verbose: true,
   collectCoverage: true,
   coverageDirectory: 'test/coverage'
