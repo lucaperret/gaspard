@@ -2,7 +2,7 @@
 > Lightweight DOM helpers
 
 [![Build Status](https://travis-ci.org/lucaperret/gaspard.svg)](https://travis-ci.org/lucaperret/gaspard.svg)
-[![Coverage Status](https://coveralls.io/repos/lucaperret/gaspard/badge.svg?service=github)](https://coveralls.io/github/lucaperret/gaspard)
+[![Coverage Status](https://coveralls.io/repos/github/lucaperret/gaspard/badge.svg?branch=master)](https://coveralls.io/github/lucaperret/gaspard?branch=master)
 [![Dependency Status](https://david-dm.org/lucaperret/gaspard.svg)](https://david-dm.org/lucaperret/gaspard.svg)
 [![devDependency Status](https://david-dm.org/lucaperret/gaspard/dev-status.svg)](https://david-dm.org/lucaperret/gaspard.svg#info=devDependencies)
 
