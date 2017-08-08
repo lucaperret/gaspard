@@ -1,6 +1,13 @@
 # Gaspard
 > Lightweight DOM helpers
 
+[![Dependency Status](https://david-dm.org/lucaperret/gaspard.svg)](https://david-dm.org/lucaperret/gaspard.svg)
+[![devDependency Status](https://david-dm.org/lucaperret/gaspard.svg)](https://david-dm.org/lucaperret/gaspard.svg#info=devDependencies)
+
+[![Build Status](https://travis-ci.org/lucaperret/gaspard.svg)](https://travis-ci.org/lucaperret/gaspard.svg)
+[![Coverage Status](https://coveralls.io/repos/lucaperret/gaspard/badge.svg?service=github)](https://coveralls.io/github/lucaperret/gaspard)
+
+
 The goal is to implement each [You might not need jQuery](http://youmightnotneedjquery.com)'s functions as ES modules. Enabling the power of Tree-shaking in [webpack](https://webpack.js.org/guides/tree-shaking/) or [rollup](https://rollupjs.org/#tree-shaking).
 
 
