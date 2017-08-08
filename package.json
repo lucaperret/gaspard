@@ -6,6 +6,7 @@
   "main": "dist/gaspard.common.js",
   "module": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "dev": "webpack-dev-server --open -d",
     "build": "webpack --env.production --progress --config webpack.config.js",
     "build:examples": "webpack -p --progress --config examples/webpack.config.js",
@@ -33,16 +34,17 @@
   "license": "MIT",
   "bugs": "https://github.com/lucaperret/gaspard/issues",
   "repository": "lucaperret/gaspard",
-  "dependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
-    "coveralls": "^2.13.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-2": "^6.24.1",
+    "commitizen": "^2.9.6",
+    "coveralls": "^2.13.1",
+    "cz-conventional-changelog": "^2.0.0",
     "documentation": "^5.1.0",
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
@@ -67,5 +69,10 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
