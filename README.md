@@ -38,6 +38,8 @@ const Gaspard = require('gaspard')
 Via `<script>`
 ```html
 <script src="node_modules/gaspard/dist/gaspard.umd.js"></script>
+<!-- or using jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/gaspard"></script>
 <script>
 Gaspard.documentReady(function () {
   Gaspard.find('html').addClass('dom-loaded');

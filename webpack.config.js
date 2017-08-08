@@ -35,7 +35,7 @@ const configDevevelopment = {
       }
     ]
   },
-  devtool: '#cheap-module-eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: [resolve('src'), resolve('dist'), resolve('examples')],
     hot: true,
@@ -65,6 +65,7 @@ const configProduction = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -86,7 +87,12 @@ const configProduction = {
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.BannerPlugin(banner),
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: true
+      }
+    })
   ]
 }
 

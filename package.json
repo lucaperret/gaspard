@@ -1,6 +1,6 @@
 {
   "name": "gaspard",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Lightweight DOM helpers",
   "homepage": "https://github.com/lucaperret/gaspard",
   "main": "dist/gaspard.umd.js",
@@ -40,6 +40,7 @@
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-2": "^6.24.1",
     "commitizen": "^2.9.6",
@@ -68,7 +69,8 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not ie <= 8"
   ],
   "config": {
     "commitizen": {
