@@ -90,7 +90,7 @@ export function next (element) {
  * @return {Array} Siblings DOM nodes
  */
 export function siblings (element) {
-  return [...element.parentNode.children].fitler(child => child !== element)
+  return [...element.parentNode.children].filter(child => child !== element)
 }
 
 /**
