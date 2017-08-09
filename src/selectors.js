@@ -38,7 +38,7 @@ export function find (selector, context = document) {
  * @return {boolean} Is element match with selectorOrElement
  */
 export function is (element, selectorOrElement) {
-  if (selectorOrElement === 'string') {
+  if (typeof selectorOrElement === 'string') {
     return (
       element.matches ||
       element.matchesSelector ||
