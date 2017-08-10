@@ -17,12 +17,15 @@ function fade (element, duration = 400, isFadeIn) {
 
   let last = +new Date()
   function tick () {
-    element.style.opacity = +element.style.opacity + (new Date() - last) / duration
+    const timeDifference = (new Date() - last) * (isFadeIn ? 1 : -1)
+    element.style.opacity = +element.style.opacity + timeDifference / duration
     last = +new Date()
 
     const targetOpacity = isFadeIn ? +element.style.opacity < 1 : +element.style.opacity > 0
     if (targetOpacity) {
       (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+    } else {
+      element.style.opacity = isFadeIn ? 1 : 0
     }
   }
 
@@ -35,7 +38,7 @@ function fade (element, duration = 400, isFadeIn) {
  * @param {Element} element A DOM node
  * @param {number} [duration=400] A number determining how long the animation will run
  */
-export function fadeIn (element, duration = 400) {
+export function fadeIn (element, duration) {
   fade(element, duration, true)
 }
 
@@ -45,7 +48,7 @@ export function fadeIn (element, duration = 400) {
  * @param {Element} element A DOM node
  * @param {number} [duration=400] A number determining how long the animation will run
  */
-export function fadeOut (element, duration = 400) {
+export function fadeOut (element, duration) {
   fade(element, duration, false)
 }
 
