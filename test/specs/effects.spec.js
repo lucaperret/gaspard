@@ -28,6 +28,7 @@ describe('Effects', () => {
     effects.fadeIn(element)
     jest.runAllTimers()
     expect(window.requestAnimationFrame).toBeCalled()
+    delete window.requestAnimationFrame
   })
   test('Fade out', () => {
     element.style.opacity = 0
