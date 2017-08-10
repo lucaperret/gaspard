@@ -12,8 +12,7 @@
  * @param {boolean} isFadeIn Determine fadeIn or fadeOut
  */
 function fade (element, duration = 400, isFadeIn) {
-  const opacity = isFadeIn ? 0 : 1
-  element.style.opacity = opacity
+  element.style.opacity = isFadeIn ? 0 : 1
 
   let last = +new Date()
   function tick () {
@@ -24,8 +23,6 @@ function fade (element, duration = 400, isFadeIn) {
     const targetOpacity = isFadeIn ? +element.style.opacity < 1 : +element.style.opacity > 0
     if (targetOpacity) {
       (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
-    } else {
-      element.style.opacity = isFadeIn ? 1 : 0
     }
   }
 
