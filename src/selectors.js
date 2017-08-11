@@ -16,7 +16,7 @@ export function find (selector, context = document) {
   }
   let elements
   if (/^#[\w-]*$/.test(selector)) {
-    elements = document.getElementById(selector.substr(1))
+    elements = document.getElementById(selector.substr(1)) || []
   } else if (/^\.[\w-]*$/.test(selector)) {
     elements = context.getElementsByClassName(selector.slice(1))
   } else if (/^\w+$/.test(selector)) {
