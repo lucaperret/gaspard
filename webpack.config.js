@@ -5,7 +5,7 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const resolve = dir => path.join(__dirname, dir)
-const banner = PACKAGE.name + ' - ' + PACKAGE.version + ' | ' +
+const banner = PACKAGE.name + ' | ' +
   '(c) ' + new Date().getFullYear() + '  ' + PACKAGE.author + ' | ' +
   PACKAGE.license + ' | ' +
   PACKAGE.homepage
