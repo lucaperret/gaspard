@@ -51,7 +51,7 @@ export function outerHeight (element, withMargin) {
   let height = element.offsetHeight
   if (withMargin) {
     const style = getComputedStyle(element)
-    height += parseInt(style.marginTop) + parseInt(style.marginBottom)
+    height += parseInt(style.marginTop || 0) + parseInt(style.marginBottom || 0)
   }
   return height
 }
@@ -67,7 +67,7 @@ export function outerWidth (element, withMargin) {
   let width = element.offsetWidth
   if (withMargin) {
     const style = getComputedStyle(element)
-    width += parseInt(style.marginLeft) + parseInt(style.marginRight)
+    width += parseInt(style.marginLeft || 0) + parseInt(style.marginRight || 0)
   }
   return width
 }
