@@ -21,14 +21,14 @@ describe('Effects', () => {
     expect(Number(element.style.opacity)).toBeGreaterThanOrEqual(1)
   })
   test('RAF fade in', () => {
-    window.requestAnimationFrame = jest.fn(fn => setTimeout(fn, 1))
+    global.requestAnimationFrame = jest.fn()
     effects.fadeIn(element, 1)
     jest.runAllTimers()
-    expect(window.requestAnimationFrame).toBeCalled()
+    expect(global.requestAnimationFrame).toBeCalled()
     effects.fadeIn(element)
     jest.runAllTimers()
-    expect(window.requestAnimationFrame).toBeCalled()
-    delete window.requestAnimationFrame
+    expect(global.requestAnimationFrame).toBeCalled()
+    delete global.requestAnimationFrame
   })
   test('Fade out', () => {
     element.style.opacity = 0
