@@ -16,7 +16,7 @@ describe('Effects', () => {
   test('Fade in', () => {
     element.style.opacity = 1
     effects.fadeIn(element, 100)
-    expect(element.style.opacity).toBe('0')
+    expect(Number(element.style.opacity)).toBeGreaterThanOrEqual(0)
     jest.runAllTimers()
     expect(Number(element.style.opacity)).toBeGreaterThanOrEqual(1)
   })
@@ -33,7 +33,7 @@ describe('Effects', () => {
   test('Fade out', () => {
     element.style.opacity = 0
     effects.fadeOut(element, 100)
-    expect(element.style.opacity).toBe('1')
+    expect(Number(element.style.opacity)).toBeLessThanOrEqual(1)
     jest.runAllTimers()
     expect(Number(element.style.opacity)).toBeLessThanOrEqual(0)
   })
