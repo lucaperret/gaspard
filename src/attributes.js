@@ -57,7 +57,7 @@ export function removeClass (element, classNames) {
   if (element.classList) {
     element.classList.remove(...classNames)
   } else {
-    element.className = classNames.forEach(className => element.className.replace(className, ''))
+    element.className = classNames.reduce((accumulator, className) => accumulator.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' '), element.className).trim()
   }
 }
 
