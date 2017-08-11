@@ -226,7 +226,7 @@ export default class GaspardElements {
    * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
    * @return {GaspardElements} A collection of Gaspard Elements to chain actions
    */
-  find (selector, ici) {
+  find (selector) {
     return this.elements
       .map(element => find(selector, element))
       .filter(element => element.length || element instanceof Element === true)
