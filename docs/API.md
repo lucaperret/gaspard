@@ -42,7 +42,7 @@
 -   [on](#on)
 -   [trigger](#trigger)
 -   [documentReady](#documentready)
--   [GaspardElements](#gaspardelements)
+-   [Collection](#collection)
     -   [each](#each)
     -   [addClass](#addclass-1)
     -   [toggleClass](#toggleclass-1)
@@ -68,7 +68,7 @@
 
 ## find
 
-[src/selectors.js:13-31](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/selectors.js#L13-L31 "Source code on GitHub")
+[src/selectors.js:13-31](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/selectors.js#L13-L31 "Source code on GitHub")
 
 Return a collection of matched elements either found in the DOM based on passed argument
 
@@ -81,7 +81,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ## is
 
-[src/selectors.js:40-53](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/selectors.js#L40-L53 "Source code on GitHub")
+[src/selectors.js:40-53](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/selectors.js#L40-L53 "Source code on GitHub")
 
 Check the element against a selector or element, and return true if the element match the given argument.
 
@@ -94,7 +94,7 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## contains
 
-[src/selectors.js:62-64](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/selectors.js#L62-L64 "Source code on GitHub")
+[src/selectors.js:62-64](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/selectors.js#L62-L64 "Source code on GitHub")
 
 Check to see if a DOM element is a descendant of another DOM element.
 
@@ -107,7 +107,7 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## prev
 
-[src/selectors.js:72-74](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/selectors.js#L72-L74 "Source code on GitHub")
+[src/selectors.js:72-74](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/selectors.js#L72-L74 "Source code on GitHub")
 
 Get the immediately preceding sibling of the element.
 
@@ -119,7 +119,7 @@ Returns **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** 
 
 ## next
 
-[src/selectors.js:82-84](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/selectors.js#L82-L84 "Source code on GitHub")
+[src/selectors.js:82-84](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/selectors.js#L82-L84 "Source code on GitHub")
 
 Get the immediately following sibling of the element.
 
@@ -131,7 +131,7 @@ Returns **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** 
 
 ## siblings
 
-[src/selectors.js:92-94](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/selectors.js#L92-L94 "Source code on GitHub")
+[src/selectors.js:92-94](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/selectors.js#L92-L94 "Source code on GitHub")
 
 Get the siblings of the element.
 
@@ -143,7 +143,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ## parent
 
-[src/selectors.js:102-104](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/selectors.js#L102-L104 "Source code on GitHub")
+[src/selectors.js:102-104](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/selectors.js#L102-L104 "Source code on GitHub")
 
 Get the parent of the element.
 
@@ -155,7 +155,7 @@ Returns **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** 
 
 ## hasClass
 
-[src/attributes.js:26-32](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L26-L32 "Source code on GitHub")
+[src/attributes.js:15-21](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L15-L21 "Source code on GitHub")
 
 Determine whether the element is assigned the given class.
 
@@ -168,7 +168,7 @@ Returns **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 ## addClass
 
-[src/attributes.js:40-47](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L40-L47 "Source code on GitHub")
+[src/attributes.js:29-36](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L29-L36 "Source code on GitHub")
 
 Adds the specified class(es) to element.
 
@@ -179,7 +179,7 @@ Adds the specified class(es) to element.
 
 ## removeClass
 
-[src/attributes.js:55-62](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L55-L62 "Source code on GitHub")
+[src/attributes.js:44-51](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L44-L51 "Source code on GitHub")
 
 Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
 
@@ -190,7 +190,7 @@ Remove a single class, multiple classes, or all classes from each element in the
 
 ## toggleClass
 
-[src/attributes.js:71-82](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L71-L82 "Source code on GitHub")
+[src/attributes.js:60-71](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L60-L71 "Source code on GitHub")
 
 Add or remove one or more classes from element, depending on either the class's presence or the value of the state argument.
 
@@ -202,7 +202,7 @@ Add or remove one or more classes from element, depending on either the class's 
 
 ## attr
 
-[src/attributes.js:98-108](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L98-L108 "Source code on GitHub")
+[src/attributes.js:87-97](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L87-L97 "Source code on GitHub")
 
 Set the value of an attribute for the element.
 
@@ -214,7 +214,7 @@ Set the value of an attribute for the element.
 
 ## attr
 
-[src/attributes.js:98-108](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L98-L108 "Source code on GitHub")
+[src/attributes.js:87-97](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L87-L97 "Source code on GitHub")
 
 Get the value of an attribute for the element
 
@@ -228,19 +228,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## css
 
-[src/attributes.js:124-130](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L124-L130 "Source code on GitHub")
-
-Set a CSS property for the element.
-
-**Parameters**
-
--   `element` **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** A DOM node
--   `ruleName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** A CSS property
--   `value` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** A value to set for the property
-
-## css
-
-[src/attributes.js:124-130](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/attributes.js#L124-L130 "Source code on GitHub")
+[src/attributes.js:113-119](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L113-L119 "Source code on GitHub")
 
 Get the computed style properties for the element.
 
@@ -252,9 +240,21 @@ Get the computed style properties for the element.
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** The value of the CSS property
 
+## css
+
+[src/attributes.js:113-119](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/attributes.js#L113-L119 "Source code on GitHub")
+
+Set a CSS property for the element.
+
+**Parameters**
+
+-   `element` **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** A DOM node
+-   `ruleName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** A CSS property
+-   `value` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** A value to set for the property
+
 ## parseHTML
 
-[src/content.js:12-16](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L12-L16 "Source code on GitHub")
+[src/content.js:12-16](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L12-L16 "Source code on GitHub")
 
 Parses a string into an array of DOM nodes.
 
@@ -266,7 +266,7 @@ Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 ## before
 
-[src/content.js:24-26](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L24-L26 "Source code on GitHub")
+[src/content.js:24-26](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L24-L26 "Source code on GitHub")
 
 Insert content, specified by the second parameter, before the element.
 
@@ -277,7 +277,7 @@ Insert content, specified by the second parameter, before the element.
 
 ## after
 
-[src/content.js:34-36](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L34-L36 "Source code on GitHub")
+[src/content.js:34-36](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L34-L36 "Source code on GitHub")
 
 Insert content, specified by the second parameter, after the element.
 
@@ -288,7 +288,7 @@ Insert content, specified by the second parameter, after the element.
 
 ## prepend
 
-[src/content.js:44-46](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L44-L46 "Source code on GitHub")
+[src/content.js:44-46](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L44-L46 "Source code on GitHub")
 
 Insert an element, specified by the second parameter, to the beginning of the parent element.
 
@@ -299,7 +299,7 @@ Insert an element, specified by the second parameter, to the beginning of the pa
 
 ## append
 
-[src/content.js:54-56](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L54-L56 "Source code on GitHub")
+[src/content.js:54-56](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L54-L56 "Source code on GitHub")
 
 Insert an element, specified by the second parameter, to the end of the parent element.
 
@@ -310,7 +310,7 @@ Insert an element, specified by the second parameter, to the end of the parent e
 
 ## clone
 
-[src/content.js:64-66](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L64-L66 "Source code on GitHub")
+[src/content.js:64-66](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L64-L66 "Source code on GitHub")
 
 Create a deep copy of the element.
 
@@ -322,7 +322,7 @@ Returns **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** 
 
 ## remove
 
-[src/content.js:73-75](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L73-L75 "Source code on GitHub")
+[src/content.js:73-75](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L73-L75 "Source code on GitHub")
 
 Remove the element from the DOM
 
@@ -332,7 +332,7 @@ Remove the element from the DOM
 
 ## text
 
-[src/content.js:89-95](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L89-L95 "Source code on GitHub")
+[src/content.js:89-95](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L89-L95 "Source code on GitHub")
 
 Get the combined text contents of the element, including his descendants.
 
@@ -345,7 +345,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## text
 
-[src/content.js:89-95](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L89-L95 "Source code on GitHub")
+[src/content.js:89-95](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L89-L95 "Source code on GitHub")
 
 Set the content of the element to the specified text.
 
@@ -356,18 +356,7 @@ Set the content of the element to the specified text.
 
 ## html
 
-[src/content.js:109-115](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L109-L115 "Source code on GitHub")
-
-Set the HTML contents of the element.
-
-**Parameters**
-
--   `element` **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** A DOM node
--   `htmlString` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** A string of HTML to set as the content
-
-## html
-
-[src/content.js:109-115](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L109-L115 "Source code on GitHub")
+[src/content.js:109-115](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L109-L115 "Source code on GitHub")
 
 Get the HTML contents of the element.
 
@@ -378,9 +367,20 @@ Get the HTML contents of the element.
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
+## html
+
+[src/content.js:109-115](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L109-L115 "Source code on GitHub")
+
+Set the HTML contents of the element.
+
+**Parameters**
+
+-   `element` **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** A DOM node
+-   `htmlString` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** A string of HTML to set as the content
+
 ## replaceWith
 
-[src/content.js:123-125](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/content.js#L123-L125 "Source code on GitHub")
+[src/content.js:123-125](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/content.js#L123-L125 "Source code on GitHub")
 
 Replace element with the provided new content.
 
@@ -391,7 +391,7 @@ Replace element with the provided new content.
 
 ## fadeIn
 
-[src/effects.js:38-40](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/effects.js#L38-L40 "Source code on GitHub")
+[src/effects.js:38-40](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/effects.js#L38-L40 "Source code on GitHub")
 
 Display the elements by fading them to opaque.
 
@@ -402,7 +402,7 @@ Display the elements by fading them to opaque.
 
 ## fadeOut
 
-[src/effects.js:48-50](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/effects.js#L48-L50 "Source code on GitHub")
+[src/effects.js:48-50](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/effects.js#L48-L50 "Source code on GitHub")
 
 Hide the element by fading them to transparent.
 
@@ -413,7 +413,7 @@ Hide the element by fading them to transparent.
 
 ## hide
 
-[src/effects.js:57-59](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/effects.js#L57-L59 "Source code on GitHub")
+[src/effects.js:57-59](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/effects.js#L57-L59 "Source code on GitHub")
 
 Hide the element.
 
@@ -423,7 +423,7 @@ Hide the element.
 
 ## show
 
-[src/effects.js:66-68](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/effects.js#L66-L68 "Source code on GitHub")
+[src/effects.js:66-68](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/effects.js#L66-L68 "Source code on GitHub")
 
 Show the element.
 
@@ -433,7 +433,7 @@ Show the element.
 
 ## viewportPosition
 
-[src/positions.js:12-14](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/positions.js#L12-L14 "Source code on GitHub")
+[src/positions.js:12-14](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/positions.js#L12-L14 "Source code on GitHub")
 
 Get the size of the element and its position relative to the viewport.
 
@@ -445,7 +445,7 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## offset
 
-[src/positions.js:22-28](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/positions.js#L22-L28 "Source code on GitHub")
+[src/positions.js:22-28](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/positions.js#L22-L28 "Source code on GitHub")
 
 Get the current coordinates of the element, relative to the document.
 
@@ -457,7 +457,7 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## position
 
-[src/positions.js:36-41](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/positions.js#L36-L41 "Source code on GitHub")
+[src/positions.js:36-41](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/positions.js#L36-L41 "Source code on GitHub")
 
 Get the current coordinates of the element, relative to the offset parent.
 
@@ -469,7 +469,7 @@ Returns **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## outerHeight
 
-[src/positions.js:50-57](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/positions.js#L50-L57 "Source code on GitHub")
+[src/positions.js:50-57](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/positions.js#L50-L57 "Source code on GitHub")
 
 Get the current computed outer height (including padding, border, and optionally margin) for the element.
 
@@ -482,7 +482,7 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## outerWidth
 
-[src/positions.js:66-73](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/positions.js#L66-L73 "Source code on GitHub")
+[src/positions.js:66-73](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/positions.js#L66-L73 "Source code on GitHub")
 
 Get the current computed outer width (including padding, border, and optionally margin) for the element.
 
@@ -495,7 +495,7 @@ Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 ## off
 
-[src/events.js:13-15](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/events.js#L13-L15 "Source code on GitHub")
+[src/events.js:13-15](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/events.js#L13-L15 "Source code on GitHub")
 
 Remove an event handler.
 
@@ -507,7 +507,7 @@ Remove an event handler.
 
 ## on
 
-[src/events.js:24-26](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/events.js#L24-L26 "Source code on GitHub")
+[src/events.js:24-26](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/events.js#L24-L26 "Source code on GitHub")
 
 Attach an event handler function for the element.
 
@@ -519,7 +519,7 @@ Attach an event handler function for the element.
 
 ## trigger
 
-[src/events.js:35-45](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/events.js#L35-L45 "Source code on GitHub")
+[src/events.js:35-45](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/events.js#L35-L45 "Source code on GitHub")
 
 Execute all handlers and behaviors attached to the element for the given event type.
 
@@ -531,7 +531,7 @@ Execute all handlers and behaviors attached to the element for the given event t
 
 ## documentReady
 
-[src/events.js:52-58](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/events.js#L52-L58 "Source code on GitHub")
+[src/events.js:52-58](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/events.js#L52-L58 "Source code on GitHub")
 
 Specify a function to execute when the DOM is fully loaded.
 
@@ -539,21 +539,21 @@ Specify a function to execute when the DOM is fully loaded.
 
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** A function to execute after the DOM is ready.
 
-## GaspardElements
+## Collection
 
-[src/gaspard.js:18-243](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L18-L243 "Source code on GitHub")
+[src/collection.js:18-243](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L18-L243 "Source code on GitHub")
 
-Use GaspardElements class to perform actions on Elements collection
+Use Collection class to perform actions on Elements
 
 **Parameters**
 
 -   `elements` **([Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)> | [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) \| [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String))** DOM Elements, Element, or string to query the DOM (optional, default `[]`)
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### each
 
-[src/gaspard.js:36-39](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L36-L39 "Source code on GitHub")
+[src/collection.js:36-39](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L36-L39 "Source code on GitHub")
 
 Apply a method on each elements and return the collection to chain methods
 
@@ -562,11 +562,11 @@ Apply a method on each elements and return the collection to chain methods
 -   `method` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** Accept a method to run on each elements
 -   `params` **any** A list of argument to call the method with
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### addClass
 
-[src/gaspard.js:46-48](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L46-L48 "Source code on GitHub")
+[src/collection.js:46-48](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L46-L48 "Source code on GitHub")
 
 -   **See: [addClass](#addclass)**
 
@@ -576,11 +576,11 @@ Add classes to each elements
 
 -   `classNames` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### toggleClass
 
-[src/gaspard.js:56-58](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L56-L58 "Source code on GitHub")
+[src/collection.js:56-58](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L56-L58 "Source code on GitHub")
 
 -   **See: [toggleClass](#toggleclass)**
 
@@ -591,11 +591,11 @@ Toggle classes to each elements
 -   `classNames` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `state` **[boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### removeClass
 
-[src/gaspard.js:65-67](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L65-L67 "Source code on GitHub")
+[src/collection.js:65-67](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L65-L67 "Source code on GitHub")
 
 -   **See: [removeClass](#removeclass)**
 
@@ -605,11 +605,11 @@ Remove classes to each elements
 
 -   `classNames` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### attr
 
-[src/gaspard.js:75-77](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L75-L77 "Source code on GitHub")
+[src/collection.js:75-77](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L75-L77 "Source code on GitHub")
 
 -   **See: [attr](#attr)**
 
@@ -620,11 +620,11 @@ Set attribute to each elements
 -   `attribute` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `value` **any** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### css
 
-[src/gaspard.js:85-87](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L85-L87 "Source code on GitHub")
+[src/collection.js:85-87](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L85-L87 "Source code on GitHub")
 
 -   **See: [css](#css)**
 
@@ -635,11 +635,11 @@ Set CSS value to each elements
 -   `ruleName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `value` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### before
 
-[src/gaspard.js:94-96](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L94-L96 "Source code on GitHub")
+[src/collection.js:94-96](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L94-L96 "Source code on GitHub")
 
 -   **See: [before](#before)**
 
@@ -649,11 +649,11 @@ Insert content before each elements
 
 -   `htmlString` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### after
 
-[src/gaspard.js:103-105](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L103-L105 "Source code on GitHub")
+[src/collection.js:103-105](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L103-L105 "Source code on GitHub")
 
 -   **See: [after](#after)**
 
@@ -663,11 +663,11 @@ Insert content after each elements
 
 -   `htmlString` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### prepend
 
-[src/gaspard.js:112-114](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L112-L114 "Source code on GitHub")
+[src/collection.js:112-114](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L112-L114 "Source code on GitHub")
 
 -   **See: [prepend](#prepend)**
 
@@ -677,11 +677,11 @@ Prepend element to each elements
 
 -   `element` **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### append
 
-[src/gaspard.js:121-123](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L121-L123 "Source code on GitHub")
+[src/collection.js:121-123](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L121-L123 "Source code on GitHub")
 
 -   **See: [append](#append)**
 
@@ -691,21 +691,21 @@ Append element to each elements
 
 -   `element` **[Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### remove
 
-[src/gaspard.js:129-131](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L129-L131 "Source code on GitHub")
+[src/collection.js:129-131](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L129-L131 "Source code on GitHub")
 
 -   **See: [remove](#remove)**
 
 Remove each elements
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### text
 
-[src/gaspard.js:138-140](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L138-L140 "Source code on GitHub")
+[src/collection.js:138-140](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L138-L140 "Source code on GitHub")
 
 -   **See: [text](#text)**
 
@@ -715,11 +715,11 @@ Set text to each elements
 
 -   `textString` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### html
 
-[src/gaspard.js:147-149](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L147-L149 "Source code on GitHub")
+[src/collection.js:147-149](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L147-L149 "Source code on GitHub")
 
 -   **See: [html](#html)**
 
@@ -729,11 +729,11 @@ Set html to each elements
 
 -   `htmlString` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### replaceWith
 
-[src/gaspard.js:156-158](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L156-L158 "Source code on GitHub")
+[src/collection.js:156-158](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L156-L158 "Source code on GitHub")
 
 -   **See: [replaceWith](#replacewith)**
 
@@ -743,11 +743,11 @@ Replace each elements
 
 -   `htmlString` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### fadeIn
 
-[src/gaspard.js:165-167](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L165-L167 "Source code on GitHub")
+[src/collection.js:165-167](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L165-L167 "Source code on GitHub")
 
 -   **See: [fadeIn](#fadein)**
 
@@ -757,11 +757,11 @@ Fade in each elements
 
 -   `duration` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### fadeOut
 
-[src/gaspard.js:174-176](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L174-L176 "Source code on GitHub")
+[src/collection.js:174-176](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L174-L176 "Source code on GitHub")
 
 -   **See: [fadeOut](#fadeout)**
 
@@ -771,31 +771,31 @@ Fade out each elements
 
 -   `duration` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### hide
 
-[src/gaspard.js:182-184](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L182-L184 "Source code on GitHub")
+[src/collection.js:182-184](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L182-L184 "Source code on GitHub")
 
 -   **See: [hide](#hide)**
 
 Hide each elements
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### show
 
-[src/gaspard.js:190-192](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L190-L192 "Source code on GitHub")
+[src/collection.js:190-192](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L190-L192 "Source code on GitHub")
 
 -   **See: [show](#show)**
 
 Show each elements
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### on
 
-[src/gaspard.js:200-202](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L200-L202 "Source code on GitHub")
+[src/collection.js:200-202](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L200-L202 "Source code on GitHub")
 
 -   **See: [on](#on)**
 
@@ -806,11 +806,11 @@ Attach an event handler function for each elements
 -   `eventName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `eventHandler` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### off
 
-[src/gaspard.js:210-212](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L210-L212 "Source code on GitHub")
+[src/collection.js:210-212](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L210-L212 "Source code on GitHub")
 
 -   **See: [off](#off)**
 
@@ -821,11 +821,11 @@ Remove an event handler function for each elements
 -   `eventName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `eventHandler` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### trigger
 
-[src/gaspard.js:220-222](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L220-L222 "Source code on GitHub")
+[src/collection.js:220-222](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L220-L222 "Source code on GitHub")
 
 -   **See: [trigger](#trigger)**
 
@@ -836,17 +836,16 @@ Execute all handlers to each elements
 -   `eventName` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** 
 -   `data` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
 
-Returns **[GaspardElements](#gaspardelements)** Gaspard Elements collection
+Returns **[Collection](#collection)** Collection containing elements
 
 ### find
 
-[src/gaspard.js:229-242](https://github.com/lucaperret/gaspard/blob/68c0828cd286835d987de70e942658621a38b779/src/gaspard.js#L229-L242 "Source code on GitHub")
+[src/collection.js:229-242](https://github.com/lucaperret/gaspard/blob/4038be832bec952561b696fa816b72a3dfd8fee7/src/collection.js#L229-L242 "Source code on GitHub")
 
 Return a collection of matched elements either found in the DOM based on passed argument
 
 **Parameters**
 
 -   `selector` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Accepts a string containing a CSS selector which is then used to match a set of elements
--   `ici`  
 
-Returns **[GaspardElements](#gaspardelements)** A collection of Gaspard Elements to chain actions
+Returns **[Collection](#collection)** Collection containing elements
