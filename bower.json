@@ -1,0 +1,31 @@
+{
+  "name": "gaspard",
+  "description": "Lightweight DOM helpers",
+  "main": "dist/gaspard.umd.js",
+  "authors": [
+    "Luca Perret <perret.luca@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "dom",
+    "helper",
+    "document",
+    "selector",
+    "attribute",
+    "position",
+    "selector"
+  ],
+  "homepage": "https://github.com/lucaperret/gaspard",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lucaperret/gaspard.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
