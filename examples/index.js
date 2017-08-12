@@ -1,4 +1,8 @@
 import { Collection } from '../src'
-const elements = new Collection('#app2')
-elements.css('background-color', 'red').fadeIn(2000)
-console.log(elements)
+const collection = new Collection('#app')
+collection
+  .css('background-color', 'green')
+  .find('p:first-child')
+  .addClass('introduction')
+  .fadeIn()
+console.log(collection)
