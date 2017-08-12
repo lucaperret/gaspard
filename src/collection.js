@@ -28,7 +28,7 @@ export default class Collection {
     this.elements = [].concat(contextElements)
   }
   /**
-   * Apply a method on each elements and return the collection to chain methods
+   * Apply a method on each elements and returns the collection to chain methods
    * @param {Function} method Accept a method to run on each elements
    * @param {any} params A list of argument to call the method with
    * @return {Collection} Collection containing elements
@@ -221,7 +221,7 @@ export default class Collection {
     return this.each(trigger, eventName, data)
   }
   /**
-   * Return a collection of matched elements either found in the DOM based on passed argument
+   * Returns a collection of matched elements either found in the DOM based on passed argument
    *
    * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
    * @return {Collection} Collection containing elements

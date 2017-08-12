@@ -4,7 +4,7 @@
  */
 
 /**
- * Return a collection of matched elements either found in the DOM based on passed argument
+ * Returns a collection of matched elements either found in the DOM based on passed argument
  *
  * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
  * @param {(HTMLDocument|Element)} [context=document] A DOM Element or Document
@@ -31,7 +31,7 @@ export function find (selector, context = document) {
 }
 
 /**
- * Check the element against a selector or element, and return true if the element match the given argument.
+ * Check the element against a selector or element, and returns true if the element match the given argument.
  *
  * @param {Element} element A DOM node
  * @param {(string|Element)} selectorOrElement A string containing a selector expression or a DOM node
