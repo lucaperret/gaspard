@@ -16,84 +16,80 @@ The goal is to implement each [You might not need jQuery](http://youmightnotneed
 
 ### Installing
 
-From npm
-```shell
-npm install gaspard
-```
+npm | yarn | bower | jsDelivr
+------------ | ------------- | ------------- | -------------
+npm install gaspard | yarn add gaspard | bower install gaspard |  [gaspard.umd.js](https://cdn.jsdelivr.net/npm/gaspard@latest/dist/gaspard.umd.js) |
 
 ### Usage
 
-Via ES2015 import statement
+Include gaspard on your project
 ```javascript
+// Via ES2015 import statement
 import * as Gaspard from 'gaspard'
-// or just a function
-import { addClass } from 'gaspard'
-```
 
-Via commonjs (the entire library will be imported)
-```javascript
+// or via Commonjs
 const Gaspard = require('gaspard')
 ```
 
-Via `<script>`
+:fire: Use gaspard's [Collection](https://github.com/lucaperret/gaspard/blob/master/docs/API.md#srccollectionjs) to queries elements and perform actions on each :fire:
+```javascript
+import { Collection } from 'gaspard'
+const collection = new Collection('div.highlight')
+collection
+  .css('background-color', 'green')
+  .find('p:first-child') // returns a new gaspard collection
+  .addClass('introduction')
+  .fadeIn(400)
+  .elements // Array of matched elements
+  .forEach(element => {
+    console.log('div.highlight first paragraph', element)
+  })
+```
+And import methods (listed in the [API Documentation](#API))
+```javascript
+import { documentReady } from 'gaspard'
+documentReady(() => {
+  addClass(document.documentElement, 'dom-loaded')
+})
+```
+
+Or use gaspard within a `<script>`
 ```html
-<script src="node_modules/gaspard/dist/gaspard.umd.js"></script>
-<!-- or using jsDelivr -->
-<script src="https://cdn.jsdelivr.net/npm/gaspard"></script>
+<script src="https://cdn.jsdelivr.net/npm/gaspard@latest/dist/gaspard.umd.js"></script>
 <script>
 Gaspard.documentReady(function () {
-  Gaspard.find('html').addClass('dom-loaded');
+  Gaspard.addClass(document.documentElement, 'dom-loaded');
 });
 </script>
 ```
 
-### API
+### API documentation
 
-[Documentation](https://github.com/lucaperret/gaspard/blob/master/docs/API.md)
+- [![Latest Documentation](https://doxdox.org/images/badge-flat.svg)](https://doxdox.org/lucaperret/gaspard)
 
-## Developing
-
-### Setting up Dev
-
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
-```shell
-git clone https://github.com/lucaperret/gaspard.git
-cd gaspard/
-npm install
-npm run dev
-```
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-Explain what these tests test and why.
-
-```shell
-npm run test
-```
-
-### Building
+- [Markdown](https://github.com/lucaperret/gaspard/blob/master/docs/API.md)
 
 
-```shell
-npm run build
-```
+## Contribute
 
-Here again you should state what actually happens when the code above gets
-executed.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
+- Fork the repository
+- Clone it locally and install dependencies with npm (or yarn)
+  ```shell
+  npm install
+  ```
+- Create a new branch
+- Develop your feature/fix with tests running
+  ```shell
+  npm run test:watch
+  ```
+- Commit, Push your branch and make a pull request on gaspard repository
 
 
 ## Thanks
 
-Thanks to the community of [You might not need jQuery](http://youmightnotneedjquery.com)
+Thanks to the open source community of [You might not need jQuery](http://youmightnotneedjquery.com), jQuery, and [cash](https://github.com/kenwheeler/cash/)
 
-Made with help of [project-guidelines](https://github.com/wearehive/project-guidelines)
 
 ## Licensing
 
