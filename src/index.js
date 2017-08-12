@@ -1,6 +1,6 @@
 /***
  * Index Module
- * @namespace index
+ * @module index
  */
 
 import Collection from './collection'

@@ -11,6 +11,18 @@ import { find } from './selectors'
 
 /**
  * Use Collection class to perform actions on Elements
+ * @example
+ * import { Collection } from 'gaspard'
+ * const collection = new Collection('div.highlight')
+ * collection
+ *   .css('background-color', 'green')
+ *   .find('p:first-child') // returns a new gaspard collection
+ *   .addClass('introduction')
+ *   .fadeIn(400)
+ *   .elements // Array of matched elements
+ *   .forEach(element => {
+ *     console.log('div.highlight first paragraph', element)
+ *   })
  *
  * @param {(Element[]|Element|string)} [elements=[]] DOM Elements, Element, or string to query the DOM
  * @return {Collection} Collection containing elements
@@ -39,7 +51,7 @@ export default class Collection {
   }
   /**
    * Add classes to each elements
-   * @see {@link addClass}
+   * @see {@link attributes/addClass}
    * @param {string} classNames
    * @return {Collection} Collection containing elements
    */
@@ -48,7 +60,7 @@ export default class Collection {
   }
   /**
    * Toggle classes to each elements
-   * @see {@link toggleClass}
+   * @see {@link attributes/toggleClass}
    * @param {string} classNames
    * @param {boolean} state
    * @return {Collection} Collection containing elements
@@ -58,7 +70,7 @@ export default class Collection {
   }
   /**
    * Remove classes to each elements
-   * @see {@link removeClass}
+   * @see {@link attributes/removeClass}
    * @param {string} classNames
    * @return {Collection} Collection containing elements
    */
@@ -67,7 +79,7 @@ export default class Collection {
   }
   /**
    * Set attribute to each elements
-   * @see {@link attr}
+   * @see {@link attributes/attr}
    * @param {string} attribute
    * @param {any} value
    * @return {Collection} Collection containing elements
@@ -77,7 +89,7 @@ export default class Collection {
   }
   /**
    * Set CSS value to each elements
-   * @see {@link css}
+   * @see {@link attributes/css}
    * @param {string} ruleName
    * @param {string} value
    * @return {Collection} Collection containing elements
@@ -87,7 +99,7 @@ export default class Collection {
   }
   /**
    * Insert content before each elements
-   * @see {@link before}
+   * @see {@link content/before}
    * @param {string} htmlString
    * @return {Collection} Collection containing elements
    */
@@ -96,7 +108,7 @@ export default class Collection {
   }
   /**
    * Insert content after each elements
-   * @see {@link after}
+   * @see {@link content/after}
    * @param {string} htmlString
    * @return {Collection} Collection containing elements
    */
@@ -105,7 +117,7 @@ export default class Collection {
   }
   /**
    * Prepend element to each elements
-   * @see {@link prepend}
+   * @see {@link content/prepend}
    * @param {Element} element
    * @return {Collection} Collection containing elements
    */
@@ -114,7 +126,7 @@ export default class Collection {
   }
   /**
    * Append element to each elements
-   * @see {@link append}
+   * @see {@link content/append}
    * @param {Element} element
    * @return {Collection} Collection containing elements
    */
@@ -123,7 +135,7 @@ export default class Collection {
   }
   /**
    * Remove each elements
-   * @see {@link remove}
+   * @see {@link content/remove}
    * @return {Collection} Collection containing elements
    */
   remove () {
@@ -131,7 +143,7 @@ export default class Collection {
   }
   /**
    * Set text to each elements
-   * @see {@link text}
+   * @see {@link content/text}
    * @param {string} textString
    * @return {Collection} Collection containing elements
    */
@@ -140,7 +152,7 @@ export default class Collection {
   }
   /**
    * Set html to each elements
-   * @see {@link html}
+   * @see {@link content/html}
    * @param {string} htmlString
    * @return {Collection} Collection containing elements
    */
@@ -149,7 +161,7 @@ export default class Collection {
   }
   /**
    * Replace each elements
-   * @see {@link replaceWith}
+   * @see {@link content/replaceWith}
    * @param {string} htmlString
    * @return {Collection} Collection containing elements
    */
@@ -158,7 +170,7 @@ export default class Collection {
   }
   /**
    * Fade in each elements
-   * @see {@link fadeIn}
+   * @see {@link effects/fadeIn}
    * @param {number} duration
    * @return {Collection} Collection containing elements
    */
@@ -167,7 +179,7 @@ export default class Collection {
   }
   /**
    * Fade out each elements
-   * @see {@link fadeOut}
+   * @see {@link effects/fadeOut}
    * @param {number} duration
    * @return {Collection} Collection containing elements
    */
@@ -176,7 +188,7 @@ export default class Collection {
   }
   /**
    * Hide each elements
-   * @see {@link hide}
+   * @see {@link effects/hide}
    * @return {Collection} Collection containing elements
    */
   hide () {
@@ -184,7 +196,7 @@ export default class Collection {
   }
   /**
    * Show each elements
-   * @see {@link show}
+   * @see {@link effects/show}
    * @return {Collection} Collection containing elements
    */
   show () {
@@ -192,7 +204,7 @@ export default class Collection {
   }
   /**
    * Attach an event handler function for each elements
-   * @see {@link on}
+   * @see {@link events/on}
    * @param {string} eventName
    * @param {Function} eventHandler
    * @return {Collection} Collection containing elements
@@ -202,7 +214,7 @@ export default class Collection {
   }
   /**
    * Remove an event handler function for each elements
-   * @see {@link off}
+   * @see {@link events/off}
    * @param {string} eventName
    * @param {Function} eventHandler
    * @return {Collection} Collection containing elements
@@ -212,7 +224,7 @@ export default class Collection {
   }
   /**
    * Execute all handlers to each elements
-   * @see {@link trigger}
+   * @see {@link events/trigger}
    * @param {string} eventName
    * @param {Object} data
    * @return {Collection} Collection containing elements
@@ -222,7 +234,7 @@ export default class Collection {
   }
   /**
    * Returns a collection of matched elements either found in the DOM based on passed argument
-   *
+   * @see {@link selectors/find}
    * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
    * @return {Collection} Collection containing elements
    */

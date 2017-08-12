@@ -1,12 +1,10 @@
 /***
  * Utils Module
  * @module utils
- * @private
  */
 
 /**
  * Transform kebab case string into camel case strings array
- * @private
  *
  * @param {string} kebabCaseString The kebab case string
  * @return {string} The camel case transformed string
@@ -19,7 +17,6 @@ export function toCamelCase (kebabCaseString) {
 
 /**
  * Filter incorrect class names.
- * @private
  *
  * @param {string} [classNames=''] One or more space-separated classes to be filtered
  * @return {Array} Valid class names array

@@ -14,11 +14,7 @@
     "coveralls": "cat test/coverage/lcov.info | coveralls",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .js src",
-    "doc:buildmd": "documentation build src/index.js -g -f md -o docs/API.md",
-    "doc:buildhtml": "documentation build src/index.js -g -f html -o docs/html --config docs/documentation.yml",
-    "doc:lint": "documentation lint src/index.js",
-    "doc:serve": "documentation serve --watch src/index.js",
-    "doc:readme": "documentation readme src/index.js --section=API",
+    "doc": "doxdox 'src/*.js' --layout markdown --output docs/API.md",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
@@ -47,7 +43,7 @@
     "commitizen": "^2.9.6",
     "coveralls": "^2.13.1",
     "cz-conventional-changelog": "^2.0.0",
-    "documentation": "^5.1.0",
+    "doxdox": "^2.0.3",
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
