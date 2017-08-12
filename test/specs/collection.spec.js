@@ -1,4 +1,4 @@
-import GaspardElements from 'src/gaspard'
+import Collection from 'src/collection'
 
 const attributes = require('src/attributes')
 const content = require('src/content')
@@ -8,7 +8,7 @@ const selectors = require('src/selectors')
 /**
  * @jest-environment jsdom
  */
-describe('GaspardElements', () => {
+describe('Collection', () => {
   let elements = []
   let collection
   const commonClass = 'commonClass'
@@ -22,7 +22,7 @@ describe('GaspardElements', () => {
       document.body.appendChild(element)
       elements.push(element)
     })
-    collection = new GaspardElements(elements)
+    collection = new Collection(elements)
   })
   afterEach(() => {
     elements = []
@@ -31,16 +31,16 @@ describe('GaspardElements', () => {
   })
   describe('Initialisation', () => {
     test('Array of elements', () => {
-      expect(collection).toBeInstanceOf(GaspardElements)
+      expect(collection).toBeInstanceOf(Collection)
       expect(collection.elements).toBeInstanceOf(Array)
       expect(collection.elements.length).toBe(elements.length)
     })
     test('An element', () => {
-      const collection = new GaspardElements(elements[0])
+      const collection = new Collection(elements[0])
       expect(collection.elements.length).toBe(1)
     })
     test('Class name', () => {
-      const collection = new GaspardElements('.' + commonClass)
+      const collection = new Collection('.' + commonClass)
       expect(collection.elements.length).toBe(elements.length)
     })
   })
@@ -57,7 +57,7 @@ describe('GaspardElements', () => {
       collection.elements[0].appendChild(document.createElement('p'))
       const newCollection = collection.find('.commonClass p')
       expect(find).toHaveBeenLastCalledWith('.commonClass p', elements[1])
-      expect(newCollection).toBeInstanceOf(GaspardElements)
+      expect(newCollection).toBeInstanceOf(Collection)
       expect(newCollection.elements.length).toBe(1)
     })
     test('Unexisting', () => {
@@ -66,7 +66,7 @@ describe('GaspardElements', () => {
     })
     test('Already exist child', () => {
       collection.elements[0].appendChild(document.createElement('p'))
-      const newCollection = new GaspardElements([elements[0], elements[0].children[0].parentNode])
+      const newCollection = new Collection([elements[0], elements[0].children[0].parentNode])
       expect(newCollection.find('p').elements.length).toBe(1)
     })
   })

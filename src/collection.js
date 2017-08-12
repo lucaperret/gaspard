@@ -1,6 +1,6 @@
 /***
- * GaspardElements Module
- * @module gaspardElements
+ * Collection Module
+ * @module collection
  */
 
 import { addClass, removeClass, toggleClass, attr, css } from './attributes'
@@ -10,12 +10,12 @@ import { on, off, trigger } from './events'
 import { find } from './selectors'
 
 /**
- * Use GaspardElements class to perform actions on Elements collection
+ * Use Collection class to perform actions on Elements
  *
  * @param {(Element[]|Element|string)} [elements=[]] DOM Elements, Element, or string to query the DOM
- * @return {GaspardElements} Gaspard Elements collection
+ * @return {Collection} Collection containing elements
  */
-export default class GaspardElements {
+export default class Collection {
   constructor (elements = []) {
     let contextElements
     if (Array.isArray(elements)) {
@@ -31,7 +31,7 @@ export default class GaspardElements {
    * Apply a method on each elements and return the collection to chain methods
    * @param {Function} method Accept a method to run on each elements
    * @param {any} params A list of argument to call the method with
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   each (method, ...params) {
     this.elements.forEach(element => method(element, ...params))
@@ -41,7 +41,7 @@ export default class GaspardElements {
    * Add classes to each elements
    * @see {@link addClass}
    * @param {string} classNames
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   addClass (classNames) {
     return this.each(addClass, classNames)
@@ -51,7 +51,7 @@ export default class GaspardElements {
    * @see {@link toggleClass}
    * @param {string} classNames
    * @param {boolean} state
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   toggleClass (classNames, state) {
     return this.each(toggleClass, classNames, state)
@@ -60,7 +60,7 @@ export default class GaspardElements {
    * Remove classes to each elements
    * @see {@link removeClass}
    * @param {string} classNames
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   removeClass (classNames) {
     return this.each(removeClass, classNames)
@@ -70,7 +70,7 @@ export default class GaspardElements {
    * @see {@link attr}
    * @param {string} attribute
    * @param {any} value
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   attr (attribute, value) {
     return this.each(attr, attribute, value)
@@ -80,7 +80,7 @@ export default class GaspardElements {
    * @see {@link css}
    * @param {string} ruleName
    * @param {string} value
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   css (ruleName, value) {
     return this.each(css, ruleName, value)
@@ -89,7 +89,7 @@ export default class GaspardElements {
    * Insert content before each elements
    * @see {@link before}
    * @param {string} htmlString
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   before (htmlString) {
     return this.each(before, htmlString)
@@ -98,7 +98,7 @@ export default class GaspardElements {
    * Insert content after each elements
    * @see {@link after}
    * @param {string} htmlString
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   after (htmlString) {
     return this.each(after, htmlString)
@@ -107,7 +107,7 @@ export default class GaspardElements {
    * Prepend element to each elements
    * @see {@link prepend}
    * @param {Element} element
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   prepend (element) {
     return this.each(prepend, element)
@@ -116,7 +116,7 @@ export default class GaspardElements {
    * Append element to each elements
    * @see {@link append}
    * @param {Element} element
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   append (element) {
     return this.each(append, element)
@@ -124,7 +124,7 @@ export default class GaspardElements {
   /**
    * Remove each elements
    * @see {@link remove}
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   remove () {
     return this.each(remove)
@@ -133,7 +133,7 @@ export default class GaspardElements {
    * Set text to each elements
    * @see {@link text}
    * @param {string} textString
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   text (textString) {
     return this.each(text, textString)
@@ -142,7 +142,7 @@ export default class GaspardElements {
    * Set html to each elements
    * @see {@link html}
    * @param {string} htmlString
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   html (htmlString) {
     return this.each(html, htmlString)
@@ -151,7 +151,7 @@ export default class GaspardElements {
    * Replace each elements
    * @see {@link replaceWith}
    * @param {string} htmlString
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   replaceWith (htmlString) {
     return this.each(replaceWith, htmlString)
@@ -160,7 +160,7 @@ export default class GaspardElements {
    * Fade in each elements
    * @see {@link fadeIn}
    * @param {number} duration
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   fadeIn (duration) {
     return this.each(fadeIn, duration)
@@ -169,7 +169,7 @@ export default class GaspardElements {
    * Fade out each elements
    * @see {@link fadeOut}
    * @param {number} duration
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   fadeOut (duration) {
     return this.each(fadeOut, duration)
@@ -177,7 +177,7 @@ export default class GaspardElements {
   /**
    * Hide each elements
    * @see {@link hide}
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   hide () {
     return this.each(hide)
@@ -185,7 +185,7 @@ export default class GaspardElements {
   /**
    * Show each elements
    * @see {@link show}
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   show () {
     return this.each(show)
@@ -195,7 +195,7 @@ export default class GaspardElements {
    * @see {@link on}
    * @param {string} eventName
    * @param {Function} eventHandler
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   on (eventName, eventHandler) {
     return this.each(on, eventName, eventHandler)
@@ -205,7 +205,7 @@ export default class GaspardElements {
    * @see {@link off}
    * @param {string} eventName
    * @param {Function} eventHandler
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   off (eventName, eventHandler) {
     return this.each(off, eventName, eventHandler)
@@ -215,7 +215,7 @@ export default class GaspardElements {
    * @see {@link trigger}
    * @param {string} eventName
    * @param {Object} data
-   * @return {GaspardElements} Gaspard Elements collection
+   * @return {Collection} Collection containing elements
    */
   trigger (eventName, data) {
     return this.each(trigger, eventName, data)
@@ -224,7 +224,7 @@ export default class GaspardElements {
    * Return a collection of matched elements either found in the DOM based on passed argument
    *
    * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
-   * @return {GaspardElements} A collection of Gaspard Elements to chain actions
+   * @return {Collection} Collection containing elements
    */
   find (selector) {
     return this.elements
@@ -238,6 +238,6 @@ export default class GaspardElements {
           accumulator.elements.push(element)
           return accumulator
         }
-      }, new GaspardElements())
+      }, new Collection())
   }
 }

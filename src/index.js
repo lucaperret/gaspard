@@ -1,9 +1,9 @@
 /***
- * index Module
+ * Index Module
  * @namespace index
  */
 
-import GaspardElements from './gaspard'
+import Collection from './collection'
 
 export { find, is, contains, prev, next, siblings, parent } from './selectors'
 export { hasClass, addClass, removeClass, toggleClass, attr, css } from './attributes'
@@ -11,4 +11,4 @@ export { parseHTML, before, after, prepend, append, clone, remove, text, html, r
 export { fadeIn, fadeOut, hide, show } from './effects'
 export { viewportPosition, offset, position, outerHeight, outerWidth } from './positions'
 export { off, on, trigger, documentReady } from './events'
-export { GaspardElements }
+export { Collection }
