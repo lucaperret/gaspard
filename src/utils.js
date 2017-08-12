@@ -16,3 +16,14 @@ export function toCamelCase (kebabCaseString) {
     return memo + token.slice(0, 1).toUpperCase() + token.slice(1)
   })
 }
+
+/**
+ * Filter incorrect class names.
+ * @private
+ *
+ * @param {string} [classNames=''] One or more space-separated classes to be filtered
+ * @return {Array} Valid class names array
+ */
+export function getRealClassNamesArray (classNames = '') {
+  return classNames.split(' ').filter(className => !!className)
+}

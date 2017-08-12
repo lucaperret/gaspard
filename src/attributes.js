@@ -3,18 +3,7 @@
  * @module attributes
  */
 
-import { toCamelCase } from './utils'
-
-/**
- * Filter incorrect class names.
- * @private
- *
- * @param {string} [classNames=''] One or more space-separated classes to be filtered
- * @return {Array} Valid class names array
- */
-function getRealClassNamesArray (classNames = '') {
-  return classNames.split(' ').filter(className => !!className)
-}
+import { toCamelCase, getRealClassNamesArray } from './utils'
 
 /**
  * Determine whether the element is assigned the given class.
