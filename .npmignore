@@ -8,3 +8,7 @@ test
 .travis.yml
 jest.config.js
 webpack.config.js
+package-lock.json
+yarn.lock
+_config.yml
+.npmignore
