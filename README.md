@@ -1,3 +1,4 @@
+[![gaspard](./gaspard.png)](https://github.com/lucaperret/gaspard)
 # Gaspard
 > Lightweight DOM helpers without dependency
 
