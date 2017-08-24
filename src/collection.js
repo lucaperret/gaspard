@@ -235,21 +235,25 @@ export default class Collection {
   /**
    * Returns a collection of matched elements either found in the DOM based on passed argument
    * @see {@link selectors/find}
-   * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
+   * @param {(string|Element)} selectorOrElement Accepts a string containing a CSS selector which is then used to match a set of elements, or an Element
    * @return {Collection} Collection containing elements
    */
-  find (selector) {
-    return this.elements
-      .map(element => find(selector, element))
-      .filter(element => element.length || element instanceof Element === true)
-      .reduce((accumulator, element) => accumulator.concat(element), [])
-      .reduce((accumulator, element) => {
-        if (~accumulator.elements.indexOf(element)) {
-          return accumulator
-        } else {
-          accumulator.elements.push(element)
-          return accumulator
-        }
-      }, new Collection())
+  find (selectorOrElement) {
+    if (selectorOrElement instanceof Element === true) {
+      return new Collection(selectorOrElement)
+    } else {
+      return this.elements
+        .map(element => find(selectorOrElement, element))
+        .filter(element => element.length || element instanceof Element === true)
+        .reduce((accumulator, element) => accumulator.concat(element), [])
+        .reduce((accumulator, element) => {
+          if (~accumulator.elements.indexOf(element)) {
+            return accumulator
+          } else {
+            accumulator.elements.push(element)
+            return accumulator
+          }
+        }, new Collection())
+    }
   }
 }

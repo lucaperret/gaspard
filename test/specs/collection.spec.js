@@ -60,6 +60,12 @@ describe('Collection', () => {
       expect(newCollection).toBeInstanceOf(Collection)
       expect(newCollection.elements.length).toBe(1)
     })
+    test('Existing element', () => {
+      const paragraph = document.createElement('p')
+      const newCollection = collection.find(paragraph)
+      expect(newCollection).toBeInstanceOf(Collection)
+      expect(newCollection.elements.length).toBe(1)
+    })
     test('Unexisting', () => {
       const newCollection = collection.find('#testId')
       expect(newCollection.elements.length).toBe(0)
