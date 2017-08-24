@@ -19,7 +19,9 @@ The goal is to implement each [You might not need jQuery](http://youmightnotneed
 
 npm | yarn | bower | jsDelivr
 ------------ | ------------- | ------------- | -------------
-npm install gaspard | yarn add gaspard | bower install gaspard |  [gaspard.umd.js](https://cdn.jsdelivr.net/npm/gaspard@latest/dist/gaspard.umd.js) |
+npm install gaspard | yarn add gaspard | bower install gaspard |  [gaspard.umd.js](https://cdn.jsdelivr.net/npm/gaspard@latest/dist/gaspard.umd.js)
+
+**The Vue.js plugin [Vue-gaspard](https://github.com/lucaperret/vue-gaspard) is also available!**
 
 ### Usage
 
@@ -63,6 +65,7 @@ Gaspard.documentReady(function () {
 });
 </script>
 ```
+
 
 ### API documentation
 
