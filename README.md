@@ -1,5 +1,7 @@
 [![gaspard](./gaspard.png)](https://github.com/lucaperret/gaspard)
 # Gaspard
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/lucaperret/gaspard.svg)](https://greenkeeper.io/)
 > Lightweight DOM helpers without dependency
 
 [![Gaspard size](https://badges.herokuapp.com/size/npm/gaspard/dist/gaspard.umd.js?gzip=true)](https://www.npmjs.com/package/gaspard)
