@@ -7,6 +7,7 @@ describe('Selectors', () => {
   beforeEach(() => {
     element = document.createElement('div')
     document.body.appendChild(element)
+    document.body.appendChild(element)
   })
   afterEach(() => {
     document.body.innerHTML = ''
@@ -21,10 +22,14 @@ describe('Selectors', () => {
     test('By Id', () => {
       element.id = 'toFind'
       expect(selectors.find('#toFind')).toBe(element)
+      expect(selectors.find('#notToFind')).toEqual([])
     })
     test('By class name', () => {
+      const span = document.createElement('span')
+      span.classList.add('toFind')
+      document.body.appendChild(span)
       element.classList.add('toFind')
-      expect(selectors.find('.toFind')).toContain(element)
+      expect(selectors.find('.toFind').length).toEqual(2)
     })
     test('By tag name', () => {
       const img = document.createElement('img')

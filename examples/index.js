@@ -1,8 +1,8 @@
-import { Collection } from '../src'
-const collection = new Collection('#app')
-collection
-  .css('background-color', 'green')
-  .find('p:first-child')
-  .addClass('introduction')
-  .fadeIn()
-console.log(collection)
+import { find, css, addClass, fadeIn } from '../'
+
+const app = find('#app')
+css(app, 'background-color', 'green')
+
+const paragraph = find('p:first-child', app)[0]
+addClass(paragraph, 'introduction')
+fadeIn(paragraph)

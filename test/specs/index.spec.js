@@ -3,7 +3,6 @@ import * as Gaspard from 'src'
 describe('Entry', () => {
   test('Contain exposed methods', () => {
     expect(Gaspard).toEqual(expect.objectContaining({
-      Collection: expect.any(Function),
       find: expect.any(Function),
       is: expect.any(Function),
       contains: expect.any(Function),
