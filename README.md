@@ -36,25 +36,19 @@ import * as Gaspard from 'gaspard'
 const Gaspard = require('gaspard')
 ```
 
-:fire: Use gaspard's [Collection](https://github.com/lucaperret/gaspard/blob/master/docs/API.md#srccollectionjs) to queries elements and perform actions on each :fire:
-```javascript
-import { Collection } from 'gaspard'
-const collection = new Collection('div.highlight')
-collection
-  .css('background-color', 'green')
-  .find('p:first-child') // returns a new gaspard collection
-  .addClass('introduction')
-  .fadeIn(400)
-  .elements // Array of matched elements
-  .forEach(element => {
-    console.log('div.highlight first paragraph', element)
-  })
-```
 And import methods (listed in the [API Documentation](#API))
 ```javascript
-import { documentReady } from 'gaspard'
+import { documentReady, find, css, addClass, fadeIn } from 'gaspard'
+
 documentReady(() => {
   addClass(document.documentElement, 'dom-loaded')
+
+  const app = find('#app')
+  css(app, 'background-color', 'green')
+
+  const paragraph = find('p:first-child', app)[0]
+  addClass(paragraph, 'introduction')
+  fadeIn(paragraph)
 })
 ```
 
