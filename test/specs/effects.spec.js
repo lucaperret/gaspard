@@ -9,6 +9,9 @@ describe('Effects', () => {
   beforeEach(() => {
     element = document.createElement('div')
     document.body.appendChild(element)
+    global.requestAnimationFrame = function (cb) {
+      return setTimeout(cb, 0)
+    }
   })
   afterEach(() => {
     document.body.innerHTML = ''
