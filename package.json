@@ -16,7 +16,7 @@
     "test:watch": "jest --watch",
     "lint": "eslint --ext .js src",
     "doc": "doxdox 'src/*.js' --layout markdown --output docs/API.md",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "jquery",
