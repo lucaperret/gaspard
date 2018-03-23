@@ -3,5 +3,5 @@ node_modules
 .idea
 docs/html
 test/coverage
-examples/examples.js
+dist/examples.js
 .coveralls.yml

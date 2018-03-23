@@ -1,9 +1,8 @@
-const webpack = require('webpack')
-
 module.exports = {
+  mode: 'production',
   entry: './examples/index.js',
   output: {
-    filename: './examples/examples.js'
+    filename: 'examples.js'
   },
   module: {
     rules: [{
@@ -17,14 +16,5 @@ module.exports = {
         ]
       }
     }]
-  },
-  plugins: [
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: true
-      }
-    })
-  ]
+  }
 }
