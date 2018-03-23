@@ -15,8 +15,7 @@
     "coveralls": "cat test/coverage/lcov.info | coveralls",
     "test:watch": "jest --watch",
     "lint": "eslint --ext .js src",
-    "doc": "doxdox 'src/*.js' --layout markdown --output docs/API.md",
-    "semantic-release": "semantic-release"
+    "doc": "doxdox 'src/*.js' --layout markdown --output docs/API.md"
   },
   "keywords": [
     "jquery",
