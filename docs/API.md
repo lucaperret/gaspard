@@ -756,7 +756,7 @@ Returns a collection of matched elements either found in the DOM based on passed
 | Name | Type | Description |  |
 | ---- | ---- | ----------- | -------- |
 | selector | `string`  | Accepts a string containing a CSS selector which is then used to match a set of elements | &nbsp; |
-| context&#x3D;document | `HTMLDocument` `Element`  | A DOM Element or Document | *Optional* |
+| context&#x3D;document | `Document` `Element`  | A DOM Element or Document | *Optional* |
 
 
 
