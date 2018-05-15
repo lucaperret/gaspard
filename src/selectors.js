@@ -7,11 +7,11 @@
  * Returns a collection of matched elements either found in the DOM based on passed argument
  *
  * @param {string} selector Accepts a string containing a CSS selector which is then used to match a set of elements
- * @param {(HTMLDocument|Element)} [context=document] A DOM Element or Document
+ * @param {(Document|Element)} [context=document] A DOM Element or Document
  * @return {Array} A collection of DOM Elements
  */
 export function find (selector, context = document) {
-  if (context instanceof Element === false && context instanceof HTMLDocument === false) {
+  if (context instanceof Element === false && context instanceof Document === false) {
     throw new TypeError('You should provide a valid dom node as second argument')
   }
   let elements
