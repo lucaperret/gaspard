@@ -33,7 +33,7 @@
   "repository": "lucaperret/gaspard",
   "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^9.0.0",
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
