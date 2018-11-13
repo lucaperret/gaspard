@@ -1,7 +1,4 @@
 module.exports = {
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest'
-  },
   roots: [
     '<rootDir>/src/',
     '<rootDir>/test/specs/'
